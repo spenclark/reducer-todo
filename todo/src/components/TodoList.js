@@ -11,7 +11,11 @@ const TodoList = props => {
         <>
             <TodoForm dispatch={dispatch} />
             {state.map(todo => {
-                return <Todo key={todo.id} todo={todo} dispatch={dispatch} />
+                return <Todo
+                 key={todo.id}
+                  todo={todo}
+                  dispatch={dispatch}
+                  />
             })}
         </>
     )
