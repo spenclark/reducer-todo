@@ -16,7 +16,7 @@ function Todo({ todo, dispatch }) {
                 textDecoration: todo.completed ? "line-through" : "" 
             }}
         >
-            <p>{todo.item}</p>
+            <h3>{todo.item}</h3>
 
         </div>
     );

@@ -3,7 +3,7 @@ import Todo from './Todo';
 import TodoForm from './TodoForm'
 import { reducer, todo } from '../reducers/todoReducer'
 
-const TodoList = props => {
+const TodoList = () => {
     const [state, dispatch] = useReducer(reducer, todo);
     console.log(state);
 

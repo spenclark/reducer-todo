@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
 const TodoForm = ({ dispatch }) => {
-    const [item, setItem] = useState('');
+    const [newTodo, setNewTodo] = useState('');
 
     const handleChanges = e => {
-        setItem(e.target.value);
+        setNewTodo(e.target.value);
     };
 
     const submitForm = e => {
         e.preventDefault();
         dispatch({
             type: "ADD_ITEM",
-            payload: item
+            payload: newTodo
         })
-        setItem("");
+        setNewTodo("");
     }
 
     const clearCompleted = e => {
@@ -29,7 +29,7 @@ const TodoForm = ({ dispatch }) => {
                 <label htmlFor="todo" hidden>
                     Todo
                 </label>
-                <input name="todo" onChange={handleChanges} value={item} />
+                <input name="todo" onChange={handleChanges} value={newTodo} />
                 <button>Add Todo</button>
                 <button onClick={clearCompleted}>Clear Completed</button>
             </form>

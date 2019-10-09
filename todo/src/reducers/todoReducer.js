@@ -1,8 +1,15 @@
-export const todo = [{
+export const todo = [
+    {
     item: 'Learn about reducers',
     completed: false,
     id: 3892987589
-  }];
+    },
+    {
+        item: "test",
+        completed: false,
+        id: 33
+    }
+];
 
 export const reducer = (state, action) => {
     switch (action.type) {
